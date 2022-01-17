@@ -27,9 +27,11 @@ The user of this application has the ability to search for any book within the G
 
 There are a few different steps to getting this application installed and ready to go on your local machine.
 
-Step 1: Clone this repo onto your local machine.
+Step 1: Install MongoDB if you haven't already. Please refer to online documents to get MongoDB up and running (MongoDB Official Installation Walkthroughs for Windows/Mac/Linux)
 
-Step 2: Navigate to this project's root directory in your terminal and run the following installation command
+Step 2: Clone this repo onto your local machine.
+
+Step 3: Navigate to this project's root directory in your terminal and run the following installation command
 
 ```
 npm install
@@ -41,7 +43,7 @@ npm install
 Continuing from the installation instructions, the following steps will help you use this application.
 
 
-Step 3: After installing all dependencies, you may invoke the application using:
+Step 4: After installing all dependencies, you may invoke the application using:
 
 ```
 npm run develop
@@ -49,9 +51,9 @@ npm run develop
 
 This will open the front end and back end concurrently (client, server).
 
-Step 4: Navigate to localhost:3000 in order to view the application locally.
+Step 5: Navigate to localhost:3000 in order to view the application locally.
 
-Step 5: Navigate to localhost:3001/graphql in order to access the back end through GraphQL and test queries and mutations
+Step 6: Navigate to localhost:3001/graphql in order to access the back end through GraphQL and test queries and mutations
 
 ## License
 
