@@ -33,7 +33,6 @@ const SavedBooks = () => {
           variables: { bookId }
         }
       );
-      console.log(data);
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } 
@@ -69,7 +68,8 @@ const SavedBooks = () => {
                   <Card.Title>{book.title}</Card.Title>
                   <p className='small'>Authors: {book.authors}</p>
                   <Card.Text>{book.description}</Card.Text>
-                  <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
+                  <Card.Link href={book.link} target="_blank">View this book on Google Books!</Card.Link>
+                  <Button className='btn-block btn-danger margin-top' onClick={() => handleDeleteBook(book.bookId)}>
                     Delete this Book!
                   </Button>
                   {error && <div>Remove Book failed =/</div>}
