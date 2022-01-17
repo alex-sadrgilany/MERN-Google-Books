@@ -23,7 +23,7 @@ https://google-books-searchengine.herokuapp.com/
 
 ## Screenshots
 
-![Gif of App functionality](https://im2.ezgif.com/tmp/ezgif-2-3154a0617f.gif)
+![Gif of App functionality](./server/assets/functionality.gif)
 
 ## Installation
 
