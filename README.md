@@ -10,18 +10,20 @@ The user of this application has the ability to search for any book within the G
 
 ## Deployed Application
 
+https://google-books-searchengine.herokuapp.com/
 
 ## Table of Contents
 
 * [Screenshots](#screenshots)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Tech Stack](#techstack)
 * [License](#license)
 * [Questions](#questions)
 
 ## Screenshots
 
-
+!(Gif of App functionality)[https://gfycat.com/bruisedgoldenflamingo]
 
 ## Installation
 
@@ -54,6 +56,22 @@ This will open the front end and back end concurrently (client, server).
 Step 5: Navigate to localhost:3000 in order to view the application locally.
 
 Step 6: Navigate to localhost:3001/graphql in order to access the back end through GraphQL and test queries and mutations
+
+## Tech Stack
+
+- MongoDB
+- Mongoose ODM
+- Express.js
+- React
+- React-Router-Dom
+- React-Scripts
+- React-Boostrap
+- Node.js
+- Apollo Client
+- Apollo-Server-Express
+- GraphQL
+- Nodemon
+- JSON Web Tokens
 
 ## License
 
