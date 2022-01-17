@@ -22,13 +22,13 @@ const resolvers = {
         }
     },
     Mutation: {
-        login: async(parent, args) => {
-            const user = await User.findOne(args.email);
+        login: async(parent, { email, password }) => {
+            const user = await User.findOne({ email });
             if (!user) {
                 throw new AuthenticationError("Invalid credentials!");
             };
 
-            const correctPw = await user.isCorrectPassword(args.password);
+            const correctPw = await user.isCorrectPassword(password);
             if (!correctPw) {
                 throw new AuthenticationError("Invalid credentials!");
             };
@@ -54,7 +54,7 @@ const resolvers = {
                         _id: context.user._id
                     },
                     {
-                        $push: { savedBooks: newBook }
+                        $addToSet: { savedBooks: args.bookData }
                     },
                     {
                         new: true,
@@ -67,20 +67,22 @@ const resolvers = {
 
             throw new AuthenticationError("You're not logged in!");
         },
-        removeBook: async(parent, args, context) => {
+        removeBook: async(parent, { bookId }, context) => {
             if (context.user) {
                 const user = await User.findByIdAndUpdate(
                     {
                         _id: context.user._id
                     },
                     {
-                        $pull: { savedBooks: args.bookId }
+                        $pull: { savedBooks: { bookId } }
                     },
                     {
                         new: true,
                         runValidators: true
                     }
-                )
+                );
+
+                return user;
             };
 
             throw new AuthenticationError("You're not logged in!");

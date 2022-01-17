@@ -72,7 +72,7 @@ const SearchBooks = () => {
     try {
       const { data } = await saveBook(
         {
-          variables: { savedBook: { ...bookToSave } }
+          variables: { bookData: { ...bookToSave } }
         }
       );
 
@@ -137,6 +137,7 @@ const SearchBooks = () => {
                         : 'Save this Book!'}
                     </Button>
                   )}
+                  {error && <div>Save Book failed =/</div>}
                 </Card.Body>
               </Card>
             );
