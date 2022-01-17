@@ -17,13 +17,13 @@ https://google-books-searchengine.herokuapp.com/
 * [Screenshots](#screenshots)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Tech Stack](#techstack)
+* [Tech Stack](#tech-stack)
 * [License](#license)
 * [Questions](#questions)
 
 ## Screenshots
 
-!(Gif of App functionality)[https://gfycat.com/bruisedgoldenflamingo]
+![Gif of App functionality](https://gfycat.com/bruisedgoldenflamingo)
 
 ## Installation
 
