@@ -81,7 +81,7 @@ module.exports = {
     response.update(verificationToken);
     response.update(endpoint);
 
-    const responseHash = hash.digest(response);
+    const responseHash = response.digest("hex");
 
     res.json({
         challengeResponse: responseHash
