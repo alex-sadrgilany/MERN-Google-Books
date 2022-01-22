@@ -5,7 +5,6 @@ const {
   saveBook,
   deleteBook,
   login,
-  ebayRoute
 } = require('../../controllers/user-controller');
 
 // import middleware
