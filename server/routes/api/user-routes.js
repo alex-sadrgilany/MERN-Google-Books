@@ -20,7 +20,4 @@ router.route('/me').get(authMiddleware, getSingleUser);
 
 router.route('/books/:bookId').delete(authMiddleware, deleteBook);
 
-router.route("/accountDeletion")
-  .get(ebayRoute);
-
 module.exports = router;
