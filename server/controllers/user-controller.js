@@ -72,12 +72,12 @@ module.exports = {
     return res.json(updatedUser);
   },
   async ebayRoute({ query }, res) {
-    const { challengeCode } = query;
+    const { challenge_code } = query;
     const endpoint = "https://google-books-searchengine.herokuapp.com/api/users/accountDeletion";
     const verificationToken = "shs87vUD3grtHkushs87vUD-grtHkushsdfhsh817vUD3grtHku";
 
     let response = crypto.createHash("sha256");
-    response.update(challengeCode);
+    response.update(challenge_code);
     response.update(verificationToken);
     response.update(endpoint);
 
