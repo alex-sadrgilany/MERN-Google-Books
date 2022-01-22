@@ -2,6 +2,7 @@
 const { User } = require('../models');
 // import sign token function from auth
 const { signToken } = require('../utils/auth');
+const crypto = require("crypto");
 
 module.exports = {
   // get a single user by either their id or their username
@@ -70,4 +71,20 @@ module.exports = {
     }
     return res.json(updatedUser);
   },
+  async ebayRoute({ query }, res) {
+    const { challengeCode } = query;
+    const endpoint = "https://google-books-searchengine.herokuapp.com/api/users/accountDeletion";
+    const verificationToken = "shs87vUD3grtHkushs87vUD-grtHkushsdfhsh817vUD3grtHku";
+
+    let response = crypto.createHash("sha256");
+    response.update(challengeCode);
+    response.update(verificationToken);
+    response.update(endpoint);
+
+    const responseHash = hash.digest(response);
+
+    res.json({
+        challengeResponse: responseHash
+    });
+}
 };

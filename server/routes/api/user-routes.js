@@ -5,6 +5,7 @@ const {
   saveBook,
   deleteBook,
   login,
+  ebayRoute
 } = require('../../controllers/user-controller');
 
 // import middleware
@@ -18,5 +19,8 @@ router.route('/login').post(login);
 router.route('/me').get(authMiddleware, getSingleUser);
 
 router.route('/books/:bookId').delete(authMiddleware, deleteBook);
+
+router.route("/accountDeletion")
+  .get(ebayRoute);
 
 module.exports = router;
